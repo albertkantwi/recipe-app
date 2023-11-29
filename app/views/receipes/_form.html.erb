@@ -10,26 +10,31 @@
         </ul>
       </div>
     <% end %>
+
     <div class="row">
       <div>
         <div>
           <%= form.label :name, class: "recipe-form-label" %>
           <%= form.text_field :name, class: "form-control recipe-form-field" %>
         </div>
+
         <div>
           <%= form.label :preparation_time, class: "recipe-form-label" %>
           <%= form.number_field :preparation_time, class: "form-control recipe-form-field" %>
         </div>
+
         <div>
           <%= form.label :cooking_time, class: "recipe-form-label" %>
           <%= form.number_field :cooking_time, class: "form-control recipe-form-field" %>
         </div>
       </div>
+
       <div>
         <div>
           <%= form.label :description, class: "recipe-form-label" %>
           <%= form.text_area :description, class: "form-control recipe-form-field", rows: 4 %>
         </div>
+        
         <div>
           <%= form.submit "Save Recipe", class: "btn btn-primary recipe-form-submit" %>
         </div>

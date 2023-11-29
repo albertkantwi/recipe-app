@@ -2,7 +2,9 @@
   <% if notice.present? %>
     <p><%= notice %></p>
   <% end %>
+
   <h1>Recipes</h1>
+
   <div>
     <% if @recipes.any? %>
       <% @recipes.each do |recipe| %>
@@ -12,6 +14,7 @@
       <p>No recipes found.</p>
     <% end %>
   </div>
+  
   <div class="new-recipe-link btn btn-primary">
     <%= link_to "New recipe", new_recipe_path, class: "btn btn-primary new-recipe-button" %>
   </div>
