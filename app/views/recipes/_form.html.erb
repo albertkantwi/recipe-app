@@ -1,7 +1,7 @@
-<div>
+<div class="container">
   <%= form_with(model: recipe, html: { class: "recipe-form-container" }) do |form| %>
     <% if recipe.errors.any? %>
-      <div>
+      <div class="recipe-error-messages">
         <h2><%= pluralize(recipe.errors.count, "error") %> can't save recipe:</h2>
         <ul>
           <% recipe.errors.each do |error| %>
@@ -12,7 +12,7 @@
     <% end %>
 
     <div class="row">
-      <div>
+      <div class="col-md-6">
         <div>
           <%= form.label :name, class: "recipe-form-label" %>
           <%= form.text_field :name, class: "form-control recipe-form-field" %>
@@ -29,12 +29,12 @@
         </div>
       </div>
 
-      <div>
+      <div class="col-md-6">
         <div>
           <%= form.label :description, class: "recipe-form-label" %>
           <%= form.text_area :description, class: "form-control recipe-form-field", rows: 4 %>
         </div>
-        
+
         <div>
           <%= form.submit "Save Recipe", class: "btn btn-primary recipe-form-submit" %>
         </div>
