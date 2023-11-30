@@ -1,21 +1,21 @@
-<div>
-  <div>
-    <h1>Recipe details</h1>
-    <div>
-      <h1><%= @recipe.name %></h1>
-      <div>
-        <div>
-          <p>Preparation time: <%= @recipe.preparation_time %> min</p>
+<div class="container">
+  <div class="recipe-details-container">
+    <h1 class="recipe-details-title">Recipe details</h1>
+    <div class="recipe-details">
+      <h1 class="recipe-name"><%= @recipe.name %></h1>
+      <div class="recipe-box">
+        <div class="recipe-details-section">
+          <p class="recipe-detail">Preparation time: <%= @recipe.preparation_time %> min</p>
         </div>
-        <div>
-          <p>Cooking time: <%= @recipe.cooking_time %> min</p>
+        <div class="recipe-details-section">
+          <p class="recipe-detail">Cooking time: <%= @recipe.cooking_time %> min</p>
         </div>
-        <div>
-          <p>Steps: <%= @recipe.description %></p>
+        <div class="recipe-details-section">
+          <p class="recipe-detail">Steps: <%= @recipe.description %></p>
         </div>
       </div>
       <% if can? :update, @recipe %>
-        <div>
+        <div class="recipe-actions">
           <%= button_to(@recipe.public? ? "Make Private" : "Make Public", toggle_recipe_public_path(@recipe), method: :put, class: "btn btn-primary recipe-action-button mb-3") %>
           <div class="btn-container1 pr-5">
             <%= link_to 'Generate Shopping List', "/shopping_list", class: 'btn btn-primary add-food-button mr-5' %>
@@ -25,8 +25,8 @@
       <% end %>
     </div>
   </div>
-  <div>
-    <table>
+  <div class="shopping-table-container">
+    <table class="table shopping-table">
       <thead>
         <tr>
           <th>Food</th>
@@ -43,7 +43,7 @@
             <td><%= link_to "#{food.name}" %></td>
             <td><%= food.recipe_foods.select { |recipe| recipe.food_id == food.id }[0].quantity %> </td>
             <td>
-              $<%=
+              $<%= 
                 food.price * food.recipe_foods.select { |recipe| recipe.food_id == food.id }[0].quantity
               %>
             </td>

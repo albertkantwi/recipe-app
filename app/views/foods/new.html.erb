@@ -1,8 +1,8 @@
-<div>
-  <h1>Add your new food here</h1>
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Add your new food here</h1>
 
   <% if @food.errors.any? %>
-    <div>
+    <div class="alert alert-danger">
       <p>
         <%= pluralize(@food.errors.count, "error") %> Found:
       </p>
@@ -14,14 +14,14 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="form-container">
     <%= form_with model: @food, url: foods_path, method: :post, html: { class: 'form' } do |form| %>
-      <div>
+      <div class="form-group">
         <%= form.label :name, class: 'form-label' %>
         <%= form.text_field :name, class: 'form-control' %>
       </div>
 
-      <div>
+      <div class="form-group">
         <%= form.label :measurement_unit, class: 'form-label' %>
         <%= form.select :measurement_unit, ['kg', 'pounds', 'grams'], { prompt: 'Select a unit' }, { class: 'form-control' } %>
       </div>
