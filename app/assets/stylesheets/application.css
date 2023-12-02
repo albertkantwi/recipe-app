@@ -1,59 +1,54 @@
 .food-list-container {
-    border: 1px solid black;
-    width: 90%;
-    margin: auto;
+  border: 1px solid black;
+  width: 90%;
+  margin: auto;
 }
 
 .sub-table {
-    border: 1px solid black;
-    margin: 60px;
-    padding-top: 30px;
+  border: 1px solid black;
+  margin: 60px;
+  padding-top: 30px;
 }
 
 .inner-table:nth-child(odd) {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 .btn-container {
-    margin-right: 150px;
-    margin-bottom: 30px;
+  margin-right: 150px;
+  margin-bottom: 30px;
 }
 
 .recipes-list {
-    display: flex;
+  display: block;
 }
 
 .recipe-details {
-    display: flex;
-    border: 1px solid black;
-    width: 100%;
-}
-
-.recipes-list {
-    display: block;
+  display: flex;
+  border: 1px solid black;
+  width: 100%;
 }
 
 .recipe-description {
-    margin-left: 70px;
+  margin-left: 70px;
 }
 
 .delete-recipe-button {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .public-recipe-table {
-    width: 80%;
-    
+  width: 80%;
 }
 
 .public {
-    font-size: 3rem;
-    font-family: sans-serif;
-    font-weight: 500;
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: 500;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .public-recipe {
@@ -72,17 +67,17 @@ li {
 }
 
 .recipe-show {
-    display: flex;
+  display: flex;
 }
 
 .recipe-action-button {
-    align-self: flex-end;
-    margin-right: 70px;
+  align-self: flex-end;
+  margin-right: 70px;
 }
 
 .btn-show {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .shopping {
@@ -91,15 +86,15 @@ li {
 }
 
 .shopping-summary {
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
 }
 
 .shopping-list-table {
-    border-collapse: collapse;
-    width: 70%;
-    margin: auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  width: 70%;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
