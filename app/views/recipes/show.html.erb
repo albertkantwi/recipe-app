@@ -1,7 +1,11 @@
 <div class="container">
   <div class="recipe-details-container">
+  
     <h1 class="recipe-details-title">Recipe details</h1>
-    <div class="recipe-details">
+    <div class="recipe-show-details">
+      <div class="text-right">
+        <%= button_to(@recipe.public? ? "Make Private" : "Make Public", toggle_recipe_public_path(@recipe), method: :put, class: "btn btn-primary recipe-action-button mb-3") %>
+        </div>
       <h1 class="recipe-name"><%= @recipe.name %></h1>
       <div class="recipe-box">
         <div class="recipe-details-section">
@@ -16,10 +20,13 @@
       </div>
       <% if can? :update, @recipe %>
         <div class="recipe-actions">
-          <%= button_to(@recipe.public? ? "Make Private" : "Make Public", toggle_recipe_public_path(@recipe), method: :put, class: "btn btn-primary recipe-action-button mb-3") %>
-          <div class="btn-container1 pr-5">
-            <%= link_to 'Generate Shopping List', "/shopping_list", class: 'btn btn-primary add-food-button mr-5' %>
-            <%= link_to 'Add Ingredients', "/recipes/#{@recipe.id}/recipe_foods/new", class: 'btn btn-primary add-food-button ml-5' %>
+          <div class="btn-show btn-container1 pr-5">
+          <div>  
+          <%= link_to 'Generate Shopping List', "/shopping_list", class: 'btn btn-primary add-food-button mr-5' %>
+          </div>
+          <div> 
+          <%= link_to 'Add Ingredients', "/recipes/#{@recipe.id}/recipe_foods/new", class: 'btn btn-primary add-food-button ml-5' %>
+          </div>
           </div>
         </div>
       <% end %>
