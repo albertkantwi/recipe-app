@@ -1,26 +1,24 @@
 <% if @public.length > 0 %>
-<div class="container text-center mt-1 pt-1" style="max-width: 400px; padding: 5px;">
-  <p class="professional-h1">Public Recipes</p>
+<div class="container ">
+  <p class="public text-center mb-4">Public Recipes</p>
 </div>
-  <table class="recipe-table">
-    <tr>
-      <th>Recipe Name</th>
-      <th>By</th>
-      <th>Total Food Items</th>
-      <th>Total Price</th>
-    </tr>
+  <ul>
     <% @public.each do |recipe| %>
-      <tr>
-        <td class="recipe-name">
-          <%= link_to recipe.name, recipe_path(recipe) %>
-        </td>
-        <td class="recipe-info">by: <%= recipe.user.name %></td>
-        <td class="recipe-info"><%= recipe.recipe_foods.length %></td>
+      <li>
+      <div class="public-recipe">
+      <div>
+        <p><%= link_to recipe.name, recipe_path(recipe) %></p>
+        <p>by: <%= recipe.user.name %></p>
+      </div>
+      <div>
+        <p class="recipe-info">Total Food items: <%= recipe.recipe_foods.length %></p>
         <% total_price = recipe.recipe_foods.sum { |food| food.food.price } %>
-        <td class="recipe-total-price">$<%= total_price %></td>
-      </tr>
+        <p class="recipe-total-price">Total Price $<%= total_price %></p>
+      </div>
+      </div>
+      </li>
     <% end %>
-  </table>
+  </ul>
 <% else %>
   <h2 class="no-recipes">No Public Recipes</h2>
 <% end %>

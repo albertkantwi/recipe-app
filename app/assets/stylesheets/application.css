@@ -1,15 +1,105 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.food-list-container {
+    border: 1px solid black;
+    width: 90%;
+    margin: auto;
+}
+
+.sub-table {
+    border: 1px solid black;
+    margin: 60px;
+    padding-top: 30px;
+}
+
+.inner-table:nth-child(odd) {
+    background-color: lightgray;
+}
+
+.btn-container {
+    margin-right: 150px;
+    margin-bottom: 30px;
+}
+
+.recipes-list {
+    display: flex;
+}
+
+.recipe-details {
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.recipes-list {
+    display: block;
+}
+
+.recipe-description {
+    margin-left: 70px;
+}
+
+.delete-recipe-button {
+    display: inline-flex;
+}
+
+.public-recipe-table {
+    width: 80%;
+    
+}
+
+.public {
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+li {
+    list-style: none;
+}
+
+.public-recipe {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 70%;
+  padding-top: 12px;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.recipe-show {
+    display: flex;
+}
+
+.recipe-action-button {
+    align-self: flex-end;
+    margin-right: 70px;
+}
+
+.btn-show {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopping {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.shopping-summary {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+.shopping-list-table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

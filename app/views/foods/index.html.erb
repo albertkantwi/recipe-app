@@ -1,9 +1,10 @@
 <div class="food-list-container mt-5">
   <h1 class="text-center mb-4">Food List</h1>
-  <div class="btn-container text-center">
+  <div class="btn-container text-right">
     <%= link_to 'Add Food', '/foods/new', class: 'btn btn-primary add-food-button' %>
   </div>
 
+  <div class="sub-table">
   <table class="table food-list-table mt-4">
     <thead>
       <tr>
@@ -15,7 +16,7 @@
     </thead>
     <tbody>
       <% @food.each do |food| %>
-        <tr>
+        <tr class="inner-table">
           <td><%= link_to "#{food.name}", food_path(food.id), class: 'food-link' %></td>
           <td><%= food.measurement_unit %></td>
           <td>$<%= food.price %></td>
@@ -24,4 +25,5 @@
       <% end %>
     </tbody>
   </table>
+  </div>
 </div>

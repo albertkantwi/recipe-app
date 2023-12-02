@@ -3,8 +3,9 @@
     <p class="notification notice"><%= notice %></p>
   <% end %>
 
-  <h1 class="page-title">Recipes</h1>
-
+  <h1 class="page-title text-center mb-4">Recipes</h1>
+  
+  
   <div class="recipes-list" id="recipes">
     <% if @recipes.any? %>
       <% @recipes.each do |recipe| %>
@@ -18,4 +19,5 @@
   <div class="new-recipe-link btn btn-primary">
     <%= link_to "New recipe", new_recipe_path, class: "btn btn-primary new-recipe-button" %>
   </div>
+
 </div>
